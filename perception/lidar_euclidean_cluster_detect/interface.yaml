@@ -1,12 +1,9 @@
 - name: lidar_euclidean_cluster_detect
-  publish: [/bounding_boxes,
-            /centroid_marker,
-            /cloud_clusters,
+  publish: [/detected_bounding_box,
             /cluster_centroids,
-            /detection/lidar_detector/objects_hulls,
-            /detection/lidar_detector/objects_markers,
-            /grid_map_wayarea,
+            /detection/lidar_detector/cloud_clusters,
+            /detection/lidar_detector/objects,
             /points_cluster,
             /points_ground,
             /points_lanes]
-  subscribe: [/grid_map_wayarea, /points_raw, /tf]
+  subscribe: [/points_raw, /tf_static, /tf]
